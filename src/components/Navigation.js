@@ -85,7 +85,7 @@ function Navigation() {
       </ul>
       <footer className="footer">
         <p>
-          <span>Made for </span>
+          <span>Made for <br /></span>
           <a
             href="https://atlan.com/"
             target="_blank"
@@ -95,8 +95,7 @@ function Navigation() {
             <img
               src={LogoSvg}
               alt="atlan"
-              width="60"
-              height="60"
+              width="150"
               className="footer-logo"
             />
           </a>
@@ -112,6 +111,7 @@ const NavigationStyled = styled.nav`
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  min-width:10rem;
   border-right: 1px solid var(--border-color);
   .nav-logo {
     height: 10vh;

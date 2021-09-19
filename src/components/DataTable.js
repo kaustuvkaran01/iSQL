@@ -1,22 +1,30 @@
 import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { SQLContext } from "../Context";
+import data from "../data/customers.json";
+import data2 from "../data/customers2.json";
+import data3 from "../data/customers3.json";
 
 const OutputTable = () => {
   const { tableColumns } = useContext(SQLContext);
-  console.log(tableColumns);
-  const columns = Object.keys(tableColumns);
 
-//   const getFilteredRows = (rows, filterKey) => {
-//     return rows.filter((row) => {
-//       return Object.values(row).some((s) =>
-//         ("" + s).toLowerCase().includes(filterKey.toLowerCase())
-//       );
-//     });
-//   };
+  console.log(tableColumns);
+  console.log(data);
+    let columns;
+  if(tableColumns === 'customerID'){
+    columns = Object.keys(data[0]);
+    console.log(columns);
+  }
+  else if(tableColumns === 'contactName'){
+    columns=Object.keys(data2[0]);
+  } else if(tableColumns === 'companyID'){
+    columns=Object.keys(data3[0]);
+  }
+  
 
   return (
     <OutputTableStyled>
+        {tableColumns}
       <table>
         <thead>
           <tr>
@@ -29,15 +37,15 @@ const OutputTable = () => {
         </thead>
 
         <tbody>
-          {getFilteredRows(data, searchFilterValue).map((row, index) => (
+          {data.map((row, index) => (
             <tr key={index}>
               {columns.map((col, index) => (
                 <td key={index}>
                   <p>{row[col]}</p>
                 </td>
               ))}
-            </tr>
-          ))}
+            </tr> 
+          ))} 
         </tbody>
       </table>
     </OutputTableStyled>

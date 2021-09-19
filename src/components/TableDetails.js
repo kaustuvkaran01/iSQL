@@ -4,6 +4,7 @@ import Dialog from "@material-ui/core/Dialog";
 import styled from "styled-components";
 import Slide from "@material-ui/core/Slide";
 import IconButton from "@material-ui/core/IconButton";
+import Button from '@material-ui/core/Button';
 // import CloseIcon from "@material-ui/icons/Close";
 import TableChartOutlinedIcon from "@material-ui/icons/TableChartOutlined";
 
@@ -32,7 +33,7 @@ const TableDetails = () => {
       <div className="details-container">
         <div id="details-title" className="details-title">
           <TableChartOutlinedIcon className="details-title-icon" />
-          <span>TABLE DETAILS</span>
+          <span>ADD ANOTHER TABLE</span>
           <IconButton
             aria-label="close"
             className="details-title-close"
@@ -44,40 +45,10 @@ const TableDetails = () => {
 
         <div id="details-content" className="details-content">
           <div>
-            <div className="details-field">NAME</div>
-            <div className="details-state">
-              {" "}
-              <span>:</span> Customers
-            </div>
+          <input type="file" name="Upload file"/>
           </div>
           <div>
-            <div className="details-field">PRIMARY KEY</div>
-            <div className="details-state">
-              {" "}
-              <span>:</span> customerID
-            </div>
-          </div>
-          <div>
-            <div className="details-field">DATABASE NAME</div>
-            <div className="details-state">
-              {" "}
-              <span>:</span> Northwind
-            </div>
-          </div>
-
-          <div>
-            <div className="details-field">CREATED</div>
-            <div className="details-state">
-              {" "}
-              <span>:</span> 05-06-2021
-            </div>
-          </div>
-          <div>
-            <div className="details-field">UPDATED</div>
-            <div className="details-state">
-              {" "}
-              <span>:</span> 07-06-2021
-            </div>
+          <Button className="submit-btn" type="submit">Submit</Button>
           </div>
         </div>
       </div>
@@ -89,8 +60,20 @@ const TableDetailStyled = styled(Dialog)`
   .MuiDialog-paper {
     border-radius: 20px;
   }
+  .submit-btn{
+    background: var(--primary-color);
+    borderRadius:24px;
+    marginTop:4px;
+    color:white;
+    &:hover{
+      background:var(--sidebar-dark-color);
+    }
+  }
   .details-container {
     width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     background-color: var(--editor-color);
     .details-title {
       display: flex;

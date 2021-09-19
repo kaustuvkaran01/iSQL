@@ -3,8 +3,6 @@ import data from "../data/customers.json";
 import data2 from "../data/customers2.json";
 import data3 from "../data/customers3.json";
 
-import styled from 'styled-components';
-
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -21,21 +19,18 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import { SQLContext } from "../Context";
 
-export default function NavigationData() {
-
-    const column = Object.keys(data[0]);
-    const column2 = Object.keys(data2[0]);
-    const column3 = Object.keys(data3[0]);
+export default function NavigationData({listItem}) {
 
     const {setTableColumns,tableColumns} = useContext(SQLContext);
     const [isOpen, setIsOpen] = useState(false);
   //  const classes = useStyles();
     const toggleListItem = () => {
     setIsOpen((value) => !value);
-      setTableColumns(column[0]);
+      setTableColumns(listItem[0]);
+
   };
   return (
-    <NavigationContainer>
+      <>
       <ListItem button component="li" onClick={()=>toggleListItem()}>
         <ListItemIcon>
           {<TableChartOutlinedIcon fontSize="small" />}
@@ -46,7 +41,7 @@ export default function NavigationData() {
               component="span"
               fontWeight={isOpen ? "fontWeightBold" : "fontWeightRegular"}
             >
-              {column[0]}
+              {listItem[0]}
             </Box>
           </Typography>
         </ListItemText>
@@ -62,7 +57,7 @@ export default function NavigationData() {
           //   </ListSubheader>
           // }
         >
-          {column.map((columnName) => (
+          {listItem.map((columnName) => (
             <ListItem dense key={2}>
               <ViewColumnIcon />
               <Tooltip
@@ -79,17 +74,6 @@ export default function NavigationData() {
           ))}
         </List>
       </Collapse>
-
-  
-    </NavigationContainer>
+      </>
   )
 };
-
-const NavigationContainer = styled.div`
-  display: flex;
-  flex-direction:column;
-  width:20rem;
-  height:90vh;
-  background: red;
-  bottom:0;
-`

@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Navigation from "./Navigation";
-import NavigationData from "./NavigationData";
+import Dataset from "./Dataset";
 
 function Sidebar({ navToggle }) {
   return (
     <SidebarStyled className={`${navToggle ? "nav-toggle" : ""}`}>
       <Navigation />
-      <NavigationData />
+      <Dataset />
     </SidebarStyled>
   );
 }
@@ -15,10 +15,11 @@ function Sidebar({ navToggle }) {
 const SidebarStyled = styled.div`
   /* width: 16.3rem; */
   width:30rem;
-  position: fixed;
+  /* position: fixed; */
   /* z-index: -1; */
-  height: 90vh;
+  height:100vh;
   bottom:0;
+  /* margin-top:10vh; */
   display:flex;
   flex-direction:"row";
   background-color: var(--sidebar-dark-color);

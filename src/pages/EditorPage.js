@@ -7,6 +7,7 @@ import Output from "../components/Output";
 import EditorButton from "../components/Editor/EditorButton";
 import TableDetails from "../components/TableDetails";
 import Snackbar from "@material-ui/core/Snackbar";
+import DataTable from '../components/DataTable';
 // import PlayArrowOutlinedIcon from "@material-ui/icons/PlayArrowOutlined";
 // import ClearAllOutlinedIcon from "@material-ui/icons/ClearAllOutlined";
 // import BrushIcon from "@material-ui/icons/Brush";
@@ -96,7 +97,6 @@ const EditorPage = () => {
 
   return (
     <div style={{display:"flex", flexDirection:"column"}}>
-      <Navbar />
       <EditorPageStyled>
         <div className="editor-buttons">
           <EditorButton title={"Run"} onClick={handleRunClick}>
@@ -109,7 +109,7 @@ const EditorPage = () => {
             {/* <BrushIcon className="editor-buttons-icon" /> */}
           </EditorButton>
 
-          <EditorButton title={"Details"} onClick={() => setModalOpen(true)}>
+          <EditorButton title={"+"} onClick={() => setModalOpen(true)}>
             {/* <InfoOutlinedIcon className="editor-buttons-icon" /> */}
           </EditorButton>
           <div
@@ -154,6 +154,7 @@ const EditorPage = () => {
           message={"No table present to filter"}
           key={`topright`}
         />
+        <DataTable />
       </EditorPageStyled>
     </div>
   );
@@ -162,9 +163,10 @@ export default EditorPage;
 
 const EditorPageStyled = styled.main`
   position: relative;
-  margin-left: 35rem;
+  /* margin-left: 35rem; */
   height: 90vh;
   background-color: var(--background-dark-color);
+  overflow:scroll;
   .editor-buttons {
     min-height: 10vh;
     display: flex;

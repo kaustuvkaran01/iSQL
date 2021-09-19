@@ -8,7 +8,7 @@ import { SQLContext } from "./Context";
 import Loading from "./components/Editor/Loading";
 import Sidebar from "./components/Sidebar";
 
-const EditorPage = lazy(() => import("./pages/EditorPage"));
+const EditorPage = lazy(() => import("./pages/Editor"));
 
 function App() {
   const { theme, setTheme, setEditorTheme, navToggle } = useContext(SQLContext);
@@ -75,6 +75,7 @@ function App() {
 }
 
 const AppContentStyled = styled.main`
+display:flex;
   .light-dark-mode {
     position: fixed;
     top: 12vh;
