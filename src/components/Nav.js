@@ -7,7 +7,7 @@ export default function Nav() {
 	<div className="container flex justify-between h-16 mx-auto">
 		<ul className="items-stretch hidden space-x-3 lg:flex">
 			<li className="flex">
-				<Link to="/" className="flex items-center -mb-0.5 border-b-2 px-4 border-transparent text-blue-600 border-violet-400">HOME</Link>
+				<Link to="/" className="flex items-center -mb-0.5 border-b-2 px-4 border-transparent text-blue-600 border-blue-600">HOME</Link>
 			</li>
 			<li className="flex">
 				<Link href="" className="flex items-center -mb-0.5 border-b-2 px-4 border-transparent">WORKSPACES</Link>
@@ -30,7 +30,7 @@ export default function Nav() {
 				</span>
 				<input type="search" name="Search" placeholder="Search..." className="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none bg-coolGray-800 text-coolGray-100 focus:bg-coolGray-900" />
 			</div>
-			<button type="button" className="hidden px-6 py-2 font-semibold rounded lg:block bg-violet-400 text-coolGray-900">Log in</button>
+			<button type="button" className="hidden px-6 py-2 font-semibold rounded lg:block bg-blue-600 text-coolGray-900">Log in</button>
 		</div>
 		<button title="Open menu" type="button" className="p-4 lg:hidden">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-coolGray-100">
