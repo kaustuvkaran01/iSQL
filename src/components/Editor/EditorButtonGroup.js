@@ -10,18 +10,18 @@ export default function EditorButtonGroup() {
     searchFilterValue,
     setSearchFilterValue} = useContext(SQLContext);
     const {
-      dataOption,
+      // dataOption,
       setDataOption,
       query,
       setQuery,
-      modalOpen,
+      // modalOpen,
       searchFilterDisabled,
       setSearchFilterDisabled
     } = useContext(SQLContext);
 
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [searchSnackbarOpen, setSearchSnackbarOpen] = useState(false);
-
+    
   const handleClearClick = () => {
     setQuery("");
     setDataOption("");
@@ -33,6 +33,8 @@ export default function EditorButtonGroup() {
   };
 
   const handleFormatClick = () => {
+    console.log(snackbarOpen);
+    console.log(searchSnackbarOpen);
     setQuery(
       format(query, {
         uppercase: true,
@@ -58,9 +60,9 @@ export default function EditorButtonGroup() {
       setDataOption("data");
     } else if (
       format(query.toUpperCase()) ===
-        format("SELECT CONTACTNAME, CITY, COUNTRY FROM CUSTOMERS") ||
+        format("SELECT CONTACT NAME, CITY, COUNTRY FROM CUSTOMERS") ||
       format(query.toUpperCase()) ===
-        format("SELECT CONTACTNAME, CITY, COUNTRY FROM CUSTOMERS;")
+        format("SELECT CONTACT NAME, CITY, COUNTRY FROM CUSTOMERS;")
     ) {
       setDataOption("data2");
     } else if (

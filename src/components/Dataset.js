@@ -1,11 +1,11 @@
 import Box from "@material-ui/core/Box";
-import Drawer from "@material-ui/core/Drawer";
+// import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import NavigationData from './NavigationData'
-import makeStyles from "@material-ui/core/styles/makeStyles";
+// import makeStyles from "@material-ui/core/styles/makeStyles";
 import Typography from "@material-ui/core/Typography";
 import styled from 'styled-components';
-import Book from "@material-ui/icons/Book";
+// import Book from "@material-ui/icons/Book";
 
 import data from "../data/customers.json";
 import data2 from "../data/customers2.json";

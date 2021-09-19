@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { SQLContext } from "../Context";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { SvgIcon } from "@material-ui/core";
+// import { SvgIcon } from "@material-ui/core";
 import HomeIcon from '@material-ui/icons/Home';
 import CodeIcon from '@material-ui/icons/Code';
 import DashboardIcon from '@material-ui/icons/Dashboard';

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import styled from "styled-components";
 import { SQLContext } from "../Context";
 import data from "../data/customers.json";

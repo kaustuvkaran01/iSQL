@@ -4,29 +4,29 @@ import styled from "styled-components";
 import { SQLContext } from "../Context";
 import Editor from "../components/Editor/Editor";
 import Output from "../components/Output";
-import EditorButton from "../components/Editor/EditorButton";
+// import EditorButton from "../components/Editor/EditorButton";
 import EditorButtonGroup from '../components/Editor/EditorButtonGroup'
 import TableDetails from "../components/TableDetails";
 import Snackbar from "@material-ui/core/Snackbar";
 import DataTable from '../components/DataTable';
-import Sidebar from '../components/Sidebar';
+// import Sidebar from '../components/Sidebar';
 // import { SQLContext } from "../Context";
 // import PlayArrowOutlinedIcon from "@material-ui/icons/PlayArrowOutlined";
 // import ClearAllOutlinedIcon from "@material-ui/icons/ClearAllOutlined";
 // import BrushIcon from "@material-ui/icons/Brush";
 // import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 // import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
-import { format } from "sql-formatter";
+// import { format } from "sql-formatter";
 
 const EditorPage = () => {
   const {
     dataOption,
-    setDataOption,
-    query,
-    setQuery,
+    // setDataOption,
+    // query,
+    // setQuery,
     modalOpen,
-    searchFilterDisabled,
-    setSearchFilterDisabled
+    // searchFilterDisabled,
+    // setSearchFilterDisabled
   } = useContext(SQLContext);
 
   const [snackbarOpen, setSnackbarOpen] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
-import data from "../data/customers.json";
-import data2 from "../data/customers2.json";
-import data3 from "../data/customers3.json";
+// import data from "../data/customers.json";
+// import data2 from "../data/customers2.json";
+// import data3 from "../data/customers3.json";
 
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
@@ -21,7 +21,7 @@ import { SQLContext } from "../Context";
 
 export default function NavigationData({listItem}) {
 
-    const {setTableColumns,tableColumns} = useContext(SQLContext);
+    const {setTableColumns} = useContext(SQLContext);
     const [isOpen, setIsOpen] = useState(false);
   //  const classes = useStyles();
     const toggleListItem = () => {
