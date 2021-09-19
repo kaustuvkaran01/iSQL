@@ -78,7 +78,9 @@ const AppContentStyled = styled.main`
   .light-dark-mode {
     position: fixed;
     top: 12vh;
-    right: 0;
+    right: 2rem;
+    border-radius:24px;
+    padding:10px;
   }
   .theme-switch span {
     color: var(--primary-color);

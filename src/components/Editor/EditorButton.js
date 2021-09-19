@@ -17,6 +17,7 @@ const EditorButtonStyled = styled.button`
   color: var(--font-light-color);
   font-size: 1rem;
   margin: 0 0 0 1rem;
+  /* padding-left:10%; */
   cursor: pointer;
   &:hover {
     color: var(--primary-color);

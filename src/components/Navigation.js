@@ -3,6 +3,11 @@ import { SQLContext } from "../Context";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { SvgIcon } from "@material-ui/core";
+import HomeIcon from '@material-ui/icons/Home';
+import CodeIcon from '@material-ui/icons/Code';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+
 import LogoSvg from "../assets/logo.png";
 // import DashboardIcon from "@material-ui/icons/Dashboard";
 // import BuildIcon from "@material-ui/icons/Build";
@@ -15,20 +20,20 @@ function Navigation() {
 
   return (
     <NavigationStyled>
-      <div className="nav-logo">
-        <NavLink to="/">
-          <div className="navbar-brand">
-            <SvgIcon className="brand-icon">
-              <path
-                fill="currentColor"
-                d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"
-              />
-            </SvgIcon>
+        {/* <div className="nav-logo">
+          <NavLink to="/">
+            <div className="navbar-brand">
+              <SvgIcon className="brand-icon">
+                <path
+                  fill="currentColor"
+                  d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"
+                />
+              </SvgIcon>
 
-            <p className="navbar-text">SQL EDITOR</p>
-          </div>
-        </NavLink>
-      </div>
+              <p className="navbar-text">iSQL</p>
+            </div>
+          </NavLink>
+        </div> */}
       <ul className="nav-items">
         <li className="nav-item">
           <NavLink
@@ -37,10 +42,10 @@ function Navigation() {
             exact
             onClick={() => setNavToggle(false)}
           >
-            <span>
+            <span className="nav-span">
               {" "}
-              {/* <HomeIcon className="nav-item-icon" /> */}
-               Home
+              <HomeIcon className="nav-item-icon"/>
+              <span>Home</span>
             </span>
           </NavLink>
         </li>
@@ -51,37 +56,29 @@ function Navigation() {
             exact
             onClick={() => setNavToggle(false)}
           >
-            <span>
+            <span className="nav-span">
               {" "}
-              {/* <CodeIcon className="nav-item-icon" />  */}
-              Editor
+              <CodeIcon className="nav-item-icon" /> 
+              <span>Editor</span>
+            </span>
+            
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/editor" onClick={() => setNavToggle(false)}>
+            <span className="nav-span">
+              {" "}
+              <DashboardIcon className="nav-item-icon" /> 
+              <span>Dashboard</span>
             </span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/editor" onClick={() => setNavToggle(false)}>
-            <span>
+            <span className="nav-span">
               {" "}
-              {/* <DashboardIcon className="nav-item-icon" />  */}
-              Dashboard
-            </span>
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/editor" onClick={() => setNavToggle(false)}>
-            <span>
-              {" "}
-              {/* <BuildIcon className="nav-item-icon" />  */}
-              Instance
-            </span>
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/editor" onClick={() => setNavToggle(false)}>
-            <span>
-              {" "}
-              {/* <ListAltIcon className="nav-item-icon" />  */}
-              Schema
+              <ListAltIcon className="nav-item-icon" /> 
+              <span>Schema</span>
             </span>
           </NavLink>
         </li>
@@ -111,11 +108,10 @@ function Navigation() {
 
 const NavigationStyled = styled.nav`
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
-  width: 100%;
   border-right: 1px solid var(--border-color);
   .nav-logo {
     height: 10vh;
@@ -143,7 +139,16 @@ const NavigationStyled = styled.nav`
       }
     }
   }
+
+  .nav-span{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
   .nav-items {
+    display:flex;
+    flex-direction:column;
     width: 100%;
     .active-class {
       background-color: var(--primary-color-light);
@@ -152,13 +157,13 @@ const NavigationStyled = styled.nav`
     }
     .nav-item-icon {
       margin-right: 0.2rem;
-      vertical-align: bottom;
-      font-size: 1.2rem;
+      margin-bottom:0.3rem;
+      font-size: 2rem;
     }
     li {
       display: block;
       span {
-        margin-left: 20%;
+        margin-left: 2%;
         font-size: 1rem;
         @media screen and (max-width: 576px) {
           margin-left: 15%;
@@ -169,9 +174,8 @@ const NavigationStyled = styled.nav`
         padding: 0.45rem 0;
         position: relative;
         z-index: 10;
-        text-transform: uppercase;
         transition: all 0.4s ease-in-out;
-        font-weight: 600;
+        font-weight: 200;
         letter-spacing: 1px;
         &:hover {
           cursor: pointer;

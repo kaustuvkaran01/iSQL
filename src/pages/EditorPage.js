@@ -25,7 +25,7 @@ const EditorPage = () => {
     searchFilterValue,
     setSearchFilterValue,
     searchFilterDisabled,
-    setSearchFilterDisabled,
+    setSearchFilterDisabled
   } = useContext(SQLContext);
 
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -95,7 +95,7 @@ const EditorPage = () => {
   };
 
   return (
-    <>
+    <div style={{display:"flex", flexDirection:"column"}}>
       <Navbar />
       <EditorPageStyled>
         <div className="editor-buttons">
@@ -155,15 +155,15 @@ const EditorPage = () => {
           key={`topright`}
         />
       </EditorPageStyled>
-    </>
+    </div>
   );
 };
 export default EditorPage;
 
 const EditorPageStyled = styled.main`
   position: relative;
-  margin-left: 16.3rem;
-  min-height: 90vh;
+  margin-left: 35rem;
+  height: 90vh;
   background-color: var(--background-dark-color);
   .editor-buttons {
     min-height: 10vh;
@@ -205,7 +205,9 @@ const EditorPageStyled = styled.main`
   }
   .pane {
     height: 80vh;
-    width: 100%;
+    /* margin-left:10%; */
+    width: 72rem;
+    /* position:right; */
     overflow: auto;
     display: flex;
     flex-direction: column;

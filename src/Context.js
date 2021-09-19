@@ -11,6 +11,7 @@ const ContextProvider = ({ children }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [searchFilterValue, setSearchFilterValue] = useState("");
   const [searchFilterDisabled, setSearchFilterDisabled] = useState(true);
+  const [tableColumns, setTableColumns] = useState("customerID");
 
   return (
     <SQLContext.Provider
@@ -31,6 +32,8 @@ const ContextProvider = ({ children }) => {
         setSearchFilterValue,
         searchFilterDisabled,
         setSearchFilterDisabled,
+        tableColumns,
+        setTableColumns
       }}
     >
       {children}
