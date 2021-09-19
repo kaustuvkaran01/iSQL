@@ -2,7 +2,12 @@ import React from 'react'
 
 import {FaFolder,FaHistory} from 'react-icons/fa';
 import {SiPostgresql} from 'react-icons/si';
-import {IoIosStats} from 'react-icons/io'
+import {IoIosStats} from 'react-icons/io';
+
+import EditorPanel from './Editor/EditorPanel';
+import ResultPanel from './Editor/ResultPanel';
+import DataPanel from './Editor/DataPanel';
+
 export default function WorkSpace() {
   return (
     <div className="flex flex-row h-full">
@@ -29,8 +34,10 @@ export default function WorkSpace() {
           Left Right
         </div>
       </div>
-      <div className="w-2/3 h-full bg-pink-600 py-4">
-        Right
+      <div className="w-2/3 h-full bg-pink-600 py-4 flex flex-col space-y-10">
+        <EditorPanel />
+        <ResultPanel />
+        <DataPanel />
       </div>
     </div>
   )
