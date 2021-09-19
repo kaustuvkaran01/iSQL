@@ -50,6 +50,6 @@ const NavigationContainer = styled.div`
   flex-direction:column;
   width:20rem;
   height:90vh;
-  background: red;
+  background: var(--editor-color);
   bottom:0;
 `

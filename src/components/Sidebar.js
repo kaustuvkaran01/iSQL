@@ -13,15 +13,13 @@ function Sidebar({ navToggle }) {
 }
 
 const SidebarStyled = styled.div`
-  /* width: 16.3rem; */
   width:30rem;
-  /* position: fixed; */
-  /* z-index: -1; */
-  height:100vh;
-  bottom:0;
   /* margin-top:10vh; */
+  height:90vh;
+  bottom:0;
+  /* position:sticky; */
   display:flex;
-  flex-direction:"row";
+  flex-direction:row;
   background-color: var(--sidebar-dark-color);
   overflow: hidden;
   transition: all 0.4s ease-in-out;

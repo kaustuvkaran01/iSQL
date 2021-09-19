@@ -53,8 +53,8 @@ const OutputTable = () => {
 };
 
 const OutputTableStyled = styled.div`
-  width: 100%;
-  overflow-x: auto;
+  width: 72rem;
+  /* overflow-x: scroll; */
   table,
   th,
   td {

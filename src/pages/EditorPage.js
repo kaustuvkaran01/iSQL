@@ -1,13 +1,16 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 import { SQLContext } from "../Context";
 import Editor from "../components/Editor/Editor";
 import Output from "../components/Output";
 import EditorButton from "../components/Editor/EditorButton";
+import EditorButtonGroup from '../components/Editor/EditorButtonGroup'
 import TableDetails from "../components/TableDetails";
 import Snackbar from "@material-ui/core/Snackbar";
 import DataTable from '../components/DataTable';
+import Sidebar from '../components/Sidebar';
+// import { SQLContext } from "../Context";
 // import PlayArrowOutlinedIcon from "@material-ui/icons/PlayArrowOutlined";
 // import ClearAllOutlinedIcon from "@material-ui/icons/ClearAllOutlined";
 // import BrushIcon from "@material-ui/icons/Brush";
@@ -22,9 +25,6 @@ const EditorPage = () => {
     query,
     setQuery,
     modalOpen,
-    setModalOpen,
-    searchFilterValue,
-    setSearchFilterValue,
     searchFilterDisabled,
     setSearchFilterDisabled
   } = useContext(SQLContext);
@@ -37,99 +37,14 @@ const EditorPage = () => {
     horizontal: "right",
   });
   const { vertical, horizontal } = direction;
-
-  const handleClearClick = () => {
-    setQuery("");
-    setDataOption("");
-    setSearchFilterDisabled(true);
-    setSnackbarOpen(true);
-    setInterval(() => {
-      setSnackbarOpen(false);
-    }, 5000);
-  };
-
-  const handleFormatClick = () => {
-    setQuery(
-      format(query, {
-        uppercase: true,
-      })
-    );
-  };
-
-  const handleSearchDisabled = () => {
-    if (searchFilterDisabled) {
-      setSearchSnackbarOpen(true);
-      setInterval(() => {
-        setSearchSnackbarOpen(false);
-      }, 5000);
-    }
-  };
-
-  const handleRunClick = () => {
-    setSearchFilterDisabled(true);
-    if (
-      format(query.toUpperCase()) === format("SELECT * FROM CUSTOMERS") ||
-      format(query.toUpperCase()) === format("SELECT * FROM CUSTOMERS;")
-    ) {
-      setDataOption("data");
-    } else if (
-      format(query.toUpperCase()) ===
-        format("SELECT CONTACTNAME, CITY, COUNTRY FROM CUSTOMERS") ||
-      format(query.toUpperCase()) ===
-        format("SELECT CONTACTNAME, CITY, COUNTRY FROM CUSTOMERS;")
-    ) {
-      setDataOption("data2");
-    } else if (
-      format(query.toUpperCase()) ===
-        format(`SELECT * FROM CUSTOMERS WHERE COUNTRY="GERMANY"`) ||
-      format(query.toUpperCase()) ===
-        format(`SELECT * FROM CUSTOMERS WHERE COUNTRY="GERMANY";`)
-    ) {
-      setDataOption("data3");
-    } else {
-      setDataOption("noQuery");
-    }
-    setSnackbarOpen(true);
-    setInterval(() => {
-      setSnackbarOpen(false);
-    }, 5000);
-  };
-
   return (
-    <div style={{display:"flex", flexDirection:"column"}}>
+    <div style={{display:"flex", flexDirection:"row"}}>
       <EditorPageStyled>
-        <div className="editor-buttons">
-          <EditorButton title={"Run"} onClick={handleRunClick}>
-            {/* <PlayArrowOutlinedIcon className="editor-buttons-icon" /> */}
-          </EditorButton>
-          <EditorButton title={"Clear"} onClick={handleClearClick}>
-            {/* <ClearAllOutlinedIcon className="editor-buttons-icon" /> */}
-          </EditorButton>
-          <EditorButton title={"Format"} onClick={handleFormatClick}>
-            {/* <BrushIcon className="editor-buttons-icon" /> */}
-          </EditorButton>
-
-          <EditorButton title={"+"} onClick={() => setModalOpen(true)}>
-            {/* <InfoOutlinedIcon className="editor-buttons-icon" /> */}
-          </EditorButton>
-          <div
-            className="editor-search-bar"
-            onClick={() => handleSearchDisabled()}
-          >
-            <input
-              type="text"
-              name="search"
-              placeholder="Search"
-              value={searchFilterValue}
-              onChange={(e) => setSearchFilterValue(e.target.value)}
-              disabled={searchFilterDisabled}
-            />
-            {/* <SearchOutlinedIcon className="editor-buttons-icon" /> */}
-          </div>
-        </div>
+        <EditorButtonGroup />
         <div className="pane">
           <Editor />
           <Output />
+        <DataTable />
         </div>
         {modalOpen && <TableDetails />}
         <Snackbar
@@ -154,19 +69,19 @@ const EditorPage = () => {
           message={"No table present to filter"}
           key={`topright`}
         />
-        <DataTable />
       </EditorPageStyled>
     </div>
   );
 };
 export default EditorPage;
 
-const EditorPageStyled = styled.main`
+const EditorPageStyled = styled.div`
+  display:flex;
+  flex-direction:column;
   position: relative;
-  /* margin-left: 35rem; */
   height: 90vh;
   background-color: var(--background-dark-color);
-  overflow:scroll;
+  /* overflow:scroll; */
   .editor-buttons {
     min-height: 10vh;
     display: flex;
@@ -208,9 +123,9 @@ const EditorPageStyled = styled.main`
   .pane {
     height: 80vh;
     /* margin-left:10%; */
-    width: 72rem;
+    /* width: 100%; */
     /* position:right; */
-    overflow: auto;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     &::-webkit-scrollbar {
@@ -224,7 +139,7 @@ const EditorPageStyled = styled.main`
     }
   }
   @media screen and (max-width: 1280px) {
-    margin-left: 12rem;
+    /* margin-left: 12rem; */
   }
   @media screen and (max-width: 1200px) {
     margin-left: 0;

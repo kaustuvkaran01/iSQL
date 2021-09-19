@@ -2,16 +2,16 @@ import React, { useEffect, useState, useContext, lazy, Suspense } from "react";
 import { Switch as Switching, Route } from "react-router-dom";
 import styled from "styled-components";
 import Landing from "./pages/Landing";
-// import Brightness4Icon from "@material-ui/icons/Brightness4";
+import Brightness4Icon from "@material-ui/icons/Brightness4";
 import Switch from "@material-ui/core/Switch";
 import { SQLContext } from "./Context";
 import Loading from "./components/Editor/Loading";
-import Sidebar from "./components/Sidebar";
+// import Sidebar from "./components/Sidebar";
 
 const EditorPage = lazy(() => import("./pages/Editor"));
 
 function App() {
-  const { theme, setTheme, setEditorTheme, navToggle } = useContext(SQLContext);
+  const { theme, setTheme, setEditorTheme} = useContext(SQLContext);
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
@@ -36,8 +36,8 @@ function App() {
         <div className="theme">
           <div className="light-dark-mode">
             <div className="left-content">
-              {/* <Brightness4Icon /> */}
-              <img src="something.com" alt="hehe"/>
+              <Brightness4Icon />
+              {/* <img src="something.com" alt="hehe"/> */}
             </div>
             <div className="right-content">
               <Switch
@@ -62,7 +62,6 @@ function App() {
       <Switching>
         <Route exact path="/" component={Landing} />
         <>
-          <Sidebar navToggle={navToggle} />
           <Route exact path="/editor">
             <Suspense fallback={<Loading />}>
               <EditorPage />
