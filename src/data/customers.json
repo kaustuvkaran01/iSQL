@@ -1,0 +1,68 @@
+[
+  {
+    "customerID": "ALFKI",
+    "companyName": "Alfreds Futterkiste",
+    "contactName": "Maria Anders",
+    "contactTitle": "Sales Representative",
+    "address": "Obere Str. 57",
+    "city": "Berlin",
+    "postalCode": "12209",
+    "country": "Germany",
+    "phone": "030-0074321"
+  },
+  {
+    "customerID": "OLDWO",
+    "companyName": "Old World Delicatessen",
+    "contactName": "Rene Phillips",
+    "contactTitle": "Sales Representative",
+    "address": "2743 Bering St.",
+    "city": "Anchorage",
+    "postalCode": "99508",
+    "country": "USA",
+    "phone": "(907) 555-7584"
+  },
+  {
+    "customerID": "OTTIK",
+    "companyName": "Ottilies Käseladen",
+    "contactName": "Henriette Pfalzheim",
+    "contactTitle": "Owner",
+    "address": "Mehrheimerstr. 369",
+    "city": "Köln",
+    "postalCode": "50739",
+    "country": "Germany",
+    "phone": "0221-0644327"
+  },
+  {
+    "customerID": "PARIS",
+    "companyName": "Paris spécialités",
+    "contactName": "Marie Bertrand",
+    "contactTitle": "Owner",
+    "address": "265 boulevard Charonne",
+    "city": "Paris",
+    "postalCode": "75012",
+    "country": "France",
+    "phone": "(1) 42.34.22.66"
+  },
+  {
+    "customerID": "PERIC",
+    "companyName": "Pericles Comidas clásicas",
+    "contactName": "Guillermo Fernández",
+    "contactTitle": "Sales Representative",
+    "address": "Calle Dr. Jorge Cash 321",
+    "city": "México D.F.",
+    "postalCode": "05033",
+    "country": "Mexico",
+    "phone": "(5) 552-3745"
+  },
+  {
+    "customerID": "SEVES",
+    "companyName": "Seven Seas Imports",
+    "contactName": "Hari Kumar",
+    "contactTitle": "Sales Manager",
+    "address": "90 Wadhurst Rd.",
+    "city": "London",
+    "postalCode": "OX15 4NB",
+    "country": "UK",
+    "phone": "(171) 555-1717"
+  }
+]

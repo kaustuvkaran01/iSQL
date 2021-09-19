@@ -1,0 +1,32 @@
+[
+  {
+    "contactName": "Maria Anders",
+    "city": "Berlin",
+    "country": "Germany"
+  },
+  {
+    "contactName": "Rene Phillips",
+    "city": "Anchorage",
+    "country": "USA"
+  },
+  {
+    "contactName": "Henriette Pfalzheim",
+    "city": "Köln",
+    "country": "Germany"
+  },
+  {
+    "contactName": "Marie Bertrand",
+    "city": "Paris",
+    "country": "France"
+  },
+  {
+    "contactName": "Guillermo Fernández",
+    "city": "México D.F.",
+    "country": "Mexico"
+  },
+  {
+    "contactName": "Hari Kumar",
+    "city": "London",
+    "country": "UK"
+  }
+]

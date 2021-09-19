@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Box";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import Paper from "@material-ui/core/Paper";
+import Paper from "@mui/material/Box";
 import PlayArrowRoundedIcon from "@material-ui/icons/PlayArrowRounded";
 import EditableTabs from "Components/EditableTabs";
 import {

@@ -1,0 +1,24 @@
+[
+  {
+    "customerID": "ALFKI",
+    "companyName": "Alfreds Futterkiste",
+    "contactName": "Maria Anders",
+    "contactTitle": "Sales Representative",
+    "address": "Obere Str. 57",
+    "city": "Berlin",
+    "postalCode": "12209",
+    "country": "Germany",
+    "phone": "030-0074321"
+  },
+  {
+    "customerID": "OTTIK",
+    "companyName": "Ottilies Käseladen",
+    "contactName": "Henriette Pfalzheim",
+    "contactTitle": "Owner",
+    "address": "Mehrheimerstr. 369",
+    "city": "Köln",
+    "postalCode": "50739",
+    "country": "Germany",
+    "phone": "0221-0644327"
+  }
+]
