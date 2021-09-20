@@ -2,11 +2,13 @@ import React,{useContext} from 'react'
 import Navbar from "../components/Navbar";
 import EditorPage from './EditorPage';
 import styled from 'styled-components';
-import Sidebar from '../components/Sidebar';
+// import Sidebar from '../components/Sidebar';
 import {SQLContext} from '../Context';
 
 export default function Editor() {
   const {navToggle} = useContext(SQLContext);
+  const Sidebar = React.lazy(() => import("../components/Sidebar"));
+  
   return (
     <EditorContainer>
       <Navbar />
@@ -27,6 +29,5 @@ const EditorContainer = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    /* width:100vw; */
   }
 `
