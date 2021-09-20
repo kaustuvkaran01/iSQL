@@ -15,7 +15,7 @@ The data has been modified by me to be used as example.
 
 ## List of all major libraries utilised in the application:
 
-I tried to use as less libraries as possible so as to make application load faster and code the proper way.
+I tried to use as few libraries as possible to make the application load faster and avoid chaos.
 
 1. ReactJS:
 2. MaterialUI: For icons and a modal
