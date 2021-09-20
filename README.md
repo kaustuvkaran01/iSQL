@@ -31,7 +31,7 @@ I tried to use as less libraries as possible so as to make application load fast
    - CLS(Cumulative Layout Shift) is 0.
    - Use of React.lazy improved the performance greatly by lazy loading the Editor component which was decreasing site performance greatly.
 
-![Screen Shot 2021-06-08 at 2 13 27 AM](https://user-images.githubusercontent.com/54510593/121086599-fd4a6b00-c800-11eb-915b-b92f15d72ac4.png)
+![Screenshot 2021-09-20 184501](https://user-images.githubusercontent.com/43791878/134008831-6121b47a-d293-4d24-9b63-96c357088320.png)
 
 2. Responsive
 
