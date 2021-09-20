@@ -25,7 +25,8 @@ I tried to use as few libraries as possible to make the application load faster 
 
 1. Optimizing Loading Time
 
-   - I used browser's lighthouse tool to find out the load time and then cross-checked it using analytic tools like GTmatrix and Web.Dev. The final **Time To Interactive** is just 1.2s with the **First Contentful Paint** being 0.8s.
+   - I used browser's lighthouse tool to find out the load time and then cross-checked it using the analytic tool: Web.Dev (the performance varied). The final **Time To Interactive** is just 1.2s with the **First Contentful Paint** being 0.8s.
+   - Removed unnecessary Components and reduced unused javascript to counter render-blocking.
    - With React's Virtual DOM, rendering components is fast & thus the **LCP Score** for the dashboard is just 1.0s.
    - **Caching with Service worker** improved performance on subsequent loads.
    - CLS(Cumulative Layout Shift) is 0.
