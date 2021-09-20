@@ -1,4 +1,4 @@
-# SQL Editor as a part of Atlan Assignment
+# SQL Editor as a part of Atlan's Hiring Challenge
 
 You can check out the application at : **https://isql.netlify.app/**
 
