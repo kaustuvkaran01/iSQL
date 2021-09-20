@@ -56,15 +56,16 @@ const OutputTable = () => {
 const OutputTableStyled = styled.div`
   min-width: 72rem;
   padding-left:1rem;
+  /* overflow: scroll; */
   .table-title{
     font-size:xx-large;
     padding:1rem;
     font-weight:bold;
   }
-  /* overflow: scroll; */
   table{
     min-width:72rem;
     margin-bottom:5rem;
+    overflow:scroll;
   }
   table,
   th,
