@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext, lazy, Suspense } from "react";
 import { Switch as Switching, Route } from "react-router-dom";
 import styled from "styled-components";
-import Landing from "./pages/Landing";
+// import Landing from "./pages/Landing";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import Switch from "@material-ui/core/Switch";
 import { SQLContext } from "./Context";
@@ -52,17 +52,17 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="lines">
+      {/* <div className="lines">
         <div className="line-1"></div>
         <div className="line-2"></div>
         <div className="line-3"></div>
         <div className="line-4"></div>
-      </div>
+      </div> */}
 
       <Switching>
-        <Route exact path="/" component={Landing} />
+        {/* <Route exact path="/" component={Landing} /> */}
         <>
-          <Route exact path="/editor">
+          <Route exact path="/">
             <Suspense fallback={<Loading />}>
               <EditorPage />
             </Suspense>

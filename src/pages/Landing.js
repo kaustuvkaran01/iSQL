@@ -160,3 +160,15 @@ const LandingStyled = styled.header`
 `;
 
 export default Landing;
+
+// import React from 'react'
+
+// export default function Landing() {
+//   return (
+//     <div className="flex justify-center items-center h-screen w-screen">
+//       <div className="bg-amber-400">
+//         This is the landing page
+//       </div>
+//     </div>
+//   )
+// }
