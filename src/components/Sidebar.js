@@ -13,7 +13,7 @@ function Sidebar({ navToggle }) {
 }
 
 const SidebarStyled = styled.div`
-  width:30rem;
+  width:30vw;
   /* margin-top:10vh; */
   height:90vh;
   bottom:0;

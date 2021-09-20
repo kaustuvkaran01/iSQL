@@ -1,30 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-// import { SQLContext } from "../Context";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import { IconButton } from "@material-ui/core";
 import { SvgIcon } from "@material-ui/core";
-// import Button from "@material-ui/core/Button";
-// import Menu from "@material-ui/core/Menu";
-// import MenuItem from "@material-ui/core/MenuItem";
-// import PermIdentityOutlinedIcon from "@material-ui/icons/PermIdentityOutlined";
-// import KeyboardArrowDownOutlinedIcon from "@material-ui/icons/KeyboardArrowDownOutlined";
-// import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-// import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
-// import ExitToAppOutlinedIcon from "@material-ui/icons/ExitToAppOutlined";
-// import TurnedInNotOutlinedIcon from "@material-ui/icons/TurnedInNotOutlined";
+
 
 const Navbar = () => {
-  // const { navToggle, setNavToggle } = useContext(SQLContext);
-  // const [dropdown, setDropdown] = useState(null);
-  // const handleClick = (event) => {
-  //   setDropdown(event.currentTarget);
-  // };
-  // const handleClose = () => {
-  //   setDropdown(null);
-  // };
-
   return (
     <NavbarStyled>
       <Link to="/">
@@ -44,58 +24,6 @@ const Navbar = () => {
         <Link to="/">API Network</Link>
         <Link to="/">Workspaces</Link>
       </div>
-      
-      {/* <div className="navbar-buttons"> */}
-        {/* <Button
-          aria-controls="navbar-menu"
-          aria-haspopup="true"
-          onMouseOver={handleClick}
-        > */}
-          {/* <PermIdentityOutlinedIcon className="navbar-item-color" /> */}
-          {/* <p className="navbar-item">Kaustuv</p> */}
-          {/* <KeyboardArrowDownOutlinedIcon className="navbar-item-color" /> */}
-        {/* </Button> */}
-        {/* <StyledMenu
-          id="navbar-menu"
-          anchorEl={dropdown}
-          keepMounted
-          elevation={0}
-          getContentAnchorEl={null}
-          open={Boolean(dropdown)}
-          MenuListProps={{ onMouseLeave: handleClose }}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "center",
-          }}
-        >
-          <MenuItem className="navbar-menu-items">
-            <AccountBalanceWalletOutlinedIcon />
-            <span> My account</span>
-          </MenuItem>
-          <MenuItem className="navbar-menu-items">
-            <TurnedInNotOutlinedIcon /> 
-            <span>Saved</span>
-          </MenuItem>
-          <MenuItem className="navbar-menu-items">
-            <HelpOutlineIcon /> 
-            <span>Help</span>
-          </MenuItem>
-          <MenuItem className="navbar-menu-items">
-            <ExitToAppOutlinedIcon /> 
-            <span>Logout</span>
-          </MenuItem>
-        </StyledMenu> */}
-        {/* <div className="ham-burger-menu">
-          <IconButton onClick={() => setNavToggle(!navToggle)}>
-            // {/* <MenuIcon className="primary-text" /> */}
-          {/* </IconButton> */}
-        {/* </div> */}
-      {/* // </div> */}
     </NavbarStyled>
   );
 };

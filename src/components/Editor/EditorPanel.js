@@ -12,10 +12,7 @@ import "ace-builds/src-noconflict/theme-github";
 
 import {v4 as uuid} from 'uuid'
 import {DEFAULT_STRINGS, noop} from 'utils/constants/common';
-// import {TOAST_ERROR, TOAST_SUCCESS} from 'utils/constants/ToastConstants';
 
-// import useActiveQueryEditor from 'hooks/useActiveQueryEditor'
-// import useToast from 'hooks/useToast'
 
 const useStyles = makeStyles((theme) => ({
   editorStyles: {
@@ -27,18 +24,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function EditorPanel({ onRunQuery = noop }) {
     const classes = useStyles();
-  
-    // const { currentQuery, handleQueryChange, editorTabs, updateEditorTabs } = useActiveQueryEditor();
-    // const { isToastVisible, showToast, toastType, toastMessage } = useToast();
-  
-    // const handleRunQuery = () => {
-    //   if (!currentQuery) {
-    //     showToast(TOAST_ERROR, "Please Enter Query");
-    //     return;
-    //   }
-    //   onRunQuery();
-    //   showToast(TOAST_SUCCESS, "Query Ran Successfully");
-    // };
   
   return (
     <Box>
@@ -64,8 +49,6 @@ export default function EditorPanel({ onRunQuery = noop }) {
         enableLiveAutocompletion: true,
         enableSnippets: true,
       }}
-      // value={currentQuery}
-      // onChange={handleQueryChange}
       className={classes.editorStyles}
       showLineNumbers
       />

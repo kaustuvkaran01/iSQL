@@ -79,6 +79,7 @@ const EditorPageStyled = styled.div`
   flex-direction:column;
   position: relative;
   height: 90vh;
+  max-width:70vw;
   background-color: var(--background-dark-color);
   /* overflow:scroll; */
   .editor-buttons {

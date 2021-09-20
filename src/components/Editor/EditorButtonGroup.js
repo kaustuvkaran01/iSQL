@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { SQLContext } from '../../Context';
 import EditorButton from './EditorButton';
 
+
 import { format } from "sql-formatter";
 
 export default function EditorButtonGroup() {
