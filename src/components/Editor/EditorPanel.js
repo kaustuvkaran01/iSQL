@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function EditorPanel({ onRunQuery = noop }) {
+const EditorPanel = ({ onRunQuery = noop }) => {
     const classes = useStyles();
   
   return (
@@ -57,3 +57,5 @@ export default function EditorPanel({ onRunQuery = noop }) {
       </Box>
   );
 }
+
+export default EditorPanel;

@@ -5,16 +5,16 @@ const GlobalStyle = createGlobalStyle`
     --primary-color: #007bff;
     --primary-color-light: #057FFF;
     --secondary-color: #ff7675;
-    --background-dark-color: #F1F1F1;
-    --background-dark-grey: #e4e4e4;
+    --background-dark-color: #EDF6F9;
+    --background-dark-grey: #83C5BE;
     --border-color: #cbced8;
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3,127,255,.3);
-    --white-color: #151515;
-    --font-light-color: #313131;
-    --font-dark-color: #313131;
-    --font-dark-color-2: #151515;
-    --sidebar-dark-color: #E4E4E4;
+    --white-color: #83C5BE;
+    --font-light-color: #EDF6F9;
+    --font-dark-color: #EDF6F9;
+    --font-dark-color-2: #EDF6F9;
+    --sidebar-dark-color: #006D77;
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
@@ -23,23 +23,31 @@ const GlobalStyle = createGlobalStyle`
 }
 .dark-theme{
     --primary-color: #007bff;
+    /* --primary-color: #17B794; */
     --primary-color-light: #057FFF;
+    /* --primary-color-light: #17B794; */
     --secondary-color: #6c757d;
-    --background-dark-color: #10121A;
-    --background-dark-grey: #191D2B;
-    --border-color: #2e344e;
-    --background-light-color: #F1F1F1;
+    /* --background-dark-color: #10121A; */
+    /* --background-dark-color:#191D2B; */
+    --background-dark-color:black;
+    
+    --background-dark-grey: black;
+    /* --background-dark-grey: #310A5D; */
+    --border-color: #5F85DB;
+    --background-light-color: #17B794;
     --background-light-color-2: rgba(3,127,255,.3);
+    
     --white-color: #FFF;
     --font-light-color: #a4acc4;
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
-    --sidebar-dark-color: #191D2B;
+    --sidebar-dark-color: #1a1a1b;
+    /* --sidebar-dark-color: #241E92; */
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
     --navigation-link-color: #a4acc4;
-    --editor-color:#292d3e;
+    --editor-color:#1a1a1b;
 }
 html {
     scroll-behavior: smooth;

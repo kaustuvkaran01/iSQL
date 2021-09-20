@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const EditorButton = ({ title, onClick, children }) => {
+const EditorButton = (props) => {
+  const { title, onClick, children } = props;
   return (
     <EditorButtonStyled onClick={onClick}>
       {title} {children}

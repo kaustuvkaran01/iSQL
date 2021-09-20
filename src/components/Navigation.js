@@ -8,7 +8,7 @@ import CodeIcon from '@material-ui/icons/Code';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 
-import LogoSvg from "../assets/logo.png";
+// import LogoSvg from "../assets/logo.png";
 // import DashboardIcon from "@material-ui/icons/Dashboard";
 // import BuildIcon from "@material-ui/icons/Build";
 // import CodeIcon from "@material-ui/icons/Code";
@@ -17,9 +17,27 @@ import LogoSvg from "../assets/logo.png";
 
 function Navigation() {
   const { setNavToggle } = useContext(SQLContext);
-
+  
   return (
     <NavigationStyled>
+      {/* <footer className="footer">
+        <p>
+          <span>Made for <br /></span>
+          <a
+            href="https://atlan.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="atlan-link2"
+          >
+            <img
+              src={LogoSvg}
+              alt="atlan"
+              width="150"
+              className="footer-logo"
+            />
+          </a>
+        </p>
+      </footer> */}
         {/* <div className="nav-logo">
           <NavLink to="/">
             <div className="navbar-brand">
@@ -83,24 +101,6 @@ function Navigation() {
           </NavLink>
         </li>
       </ul>
-      <footer className="footer">
-        <p>
-          <span>Made for <br /></span>
-          <a
-            href="https://atlan.com/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="atlan-link2"
-          >
-            <img
-              src={LogoSvg}
-              alt="atlan"
-              width="150"
-              className="footer-logo"
-            />
-          </a>
-        </p>
-      </footer>
     </NavigationStyled>
   );
 }
@@ -177,9 +177,9 @@ const NavigationStyled = styled.nav`
         transition: all 0.4s ease-in-out;
         font-weight: 200;
         letter-spacing: 1px;
+        color: var(--white-color);
         &:hover {
           cursor: pointer;
-          color: var(--white-color);
         }
         &::before {
           content: "";
@@ -216,6 +216,7 @@ const NavigationStyled = styled.nav`
     .footer-logo {
       vertical-align: middle;
       margin-left: 0.2rem;
+      width:10rem;
     }
   }
 `;

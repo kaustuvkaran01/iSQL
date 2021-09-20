@@ -49,6 +49,6 @@ const NavigationContainer = styled.div`
   flex-direction:column;
   width:20rem;
   height:90vh;
-  background: var(--editor-color);
+  background: var(--sidebar-dark-color);
   bottom:0;
 `

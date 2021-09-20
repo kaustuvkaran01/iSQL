@@ -71,7 +71,7 @@ const NavbarStyled = styled.div`
     .navbar-item {
       font-size: 1rem;
       text-transform: none;
-      color: var(--font-light-color);
+      color: var(--font-color);
       margin: 0 0.4rem;
       @media screen and (max-width: 576px) {
         font-size: 0.8rem;

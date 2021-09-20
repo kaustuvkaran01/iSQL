@@ -28,16 +28,16 @@ const Landing = () => {
         <h1>
           Perform <span>Queries</span> with us
         </h1>
-        <h2>
-          A simple sql editor for performing queries on
+        <h2 >
+          A friendly SQL editor for trying out your queries
           <br />
-          sql tables with the help of suggestions
+          With the support for data visualization
         </h2>
         <div>
           <Link to="/editor">
             <PrimaryButton>
               <div>
-                Try it for free
+                Try It Now!
                 {/* <ArrowForwardIosIcon className="icon" /> */}
               </div>
             </PrimaryButton>
@@ -118,7 +118,7 @@ const LandingStyled = styled.header`
       }
     }
     h2 {
-      font-size: 1.4rem;
+      font-size: xx-large;
       margin: 1rem;
       @media screen and (max-width: 576px) {
         font-size: 1rem;

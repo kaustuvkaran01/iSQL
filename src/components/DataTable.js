@@ -66,6 +66,7 @@ const OutputTableStyled = styled.div`
     min-width:72rem;
     margin-bottom:5rem;
     overflow:scroll;
+    background:var(--editor-color);
   }
   table,
   th,
