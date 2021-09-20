@@ -8,8 +8,8 @@ import "codemirror/mode/sql/sql";
 import "codemirror/addon/edit/matchbrackets";
 import "codemirror/keymap/sublime";
 import "codemirror/addon/hint/sql-hint.js";
-// import ExpandLessOutlinedIcon from "@material-ui/icons/ExpandLessOutlined";
-// import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
+import ExpandLessOutlinedIcon from "@material-ui/icons/ExpandLessOutlined";
+import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
 import { SQLContext } from "../../Context";
 
 const Editor = () => {
@@ -28,7 +28,8 @@ const Editor = () => {
               onClick={() => setOpen((prevOpen) => !prevOpen)}
               aria-label="expand-collapse-btn"
             >
-              {open ? <img src="dummy.com" alt="expand less"/> : <img src="dummy.com" alt="expand more" />}
+              {/* {open ? <img src="dummy.com" alt="expand less"/> : <img src="dummy.com" alt="expand more" />} */}
+              {open ? <ExpandLessOutlinedIcon /> : <ExpandMoreOutlinedIcon />}
             </button>
           </div>
           <CodeMirror

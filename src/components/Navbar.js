@@ -1,13 +1,13 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { SQLContext } from "../Context";
+// import { SQLContext } from "../Context";
 // import MenuIcon from "@material-ui/icons/Menu";
-import { IconButton } from "@material-ui/core";
+// import { IconButton } from "@material-ui/core";
 import { SvgIcon } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+// import Button from "@material-ui/core/Button";
+// import Menu from "@material-ui/core/Menu";
+// import MenuItem from "@material-ui/core/MenuItem";
 // import PermIdentityOutlinedIcon from "@material-ui/icons/PermIdentityOutlined";
 // import KeyboardArrowDownOutlinedIcon from "@material-ui/icons/KeyboardArrowDownOutlined";
 // import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
@@ -16,14 +16,14 @@ import MenuItem from "@material-ui/core/MenuItem";
 // import TurnedInNotOutlinedIcon from "@material-ui/icons/TurnedInNotOutlined";
 
 const Navbar = () => {
-  const { navToggle, setNavToggle } = useContext(SQLContext);
-  const [dropdown, setDropdown] = useState(null);
-  const handleClick = (event) => {
-    setDropdown(event.currentTarget);
-  };
-  const handleClose = () => {
-    setDropdown(null);
-  };
+  // const { navToggle, setNavToggle } = useContext(SQLContext);
+  // const [dropdown, setDropdown] = useState(null);
+  // const handleClick = (event) => {
+  //   setDropdown(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setDropdown(null);
+  // };
 
   return (
     <NavbarStyled>
@@ -38,17 +38,24 @@ const Navbar = () => {
           <p className="navbar-text">iSQL</p>
         </div>
       </Link>
-      <div className="navbar-buttons">
-        <Button
+      <div className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="/">Reports</Link>
+        <Link to="/">API Network</Link>
+        <Link to="/">Workspaces</Link>
+      </div>
+      
+      {/* <div className="navbar-buttons"> */}
+        {/* <Button
           aria-controls="navbar-menu"
           aria-haspopup="true"
           onMouseOver={handleClick}
-        >
+        > */}
           {/* <PermIdentityOutlinedIcon className="navbar-item-color" /> */}
           {/* <p className="navbar-item">Kaustuv</p> */}
           {/* <KeyboardArrowDownOutlinedIcon className="navbar-item-color" /> */}
-        </Button>
-        <StyledMenu
+        {/* </Button> */}
+        {/* <StyledMenu
           id="navbar-menu"
           anchorEl={dropdown}
           keepMounted
@@ -67,28 +74,28 @@ const Navbar = () => {
           }}
         >
           <MenuItem className="navbar-menu-items">
-            {/* <AccountBalanceWalletOutlinedIcon /> */}
+            <AccountBalanceWalletOutlinedIcon />
             <span> My account</span>
           </MenuItem>
           <MenuItem className="navbar-menu-items">
-            {/* <TurnedInNotOutlinedIcon />  */}
+            <TurnedInNotOutlinedIcon /> 
             <span>Saved</span>
           </MenuItem>
           <MenuItem className="navbar-menu-items">
-            {/* <HelpOutlineIcon />  */}
+            <HelpOutlineIcon /> 
             <span>Help</span>
           </MenuItem>
           <MenuItem className="navbar-menu-items">
-            {/* <ExitToAppOutlinedIcon />  */}
+            <ExitToAppOutlinedIcon /> 
             <span>Logout</span>
           </MenuItem>
-        </StyledMenu>
-        <div className="ham-burger-menu">
+        </StyledMenu> */}
+        {/* <div className="ham-burger-menu">
           <IconButton onClick={() => setNavToggle(!navToggle)}>
-            {/* <MenuIcon className="primary-text" /> */}
-          </IconButton>
-        </div>
-      </div>
+            // {/* <MenuIcon className="primary-text" /> */}
+          {/* </IconButton> */}
+        {/* </div> */}
+      {/* // </div> */}
     </NavbarStyled>
   );
 };
@@ -103,6 +110,14 @@ const NavbarStyled = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
+  color:var(--font-light-color);
+  padding:0 2rem;
+  .nav-links{
+    color:var(--font-light-color);
+    display:flex;
+    flex-direction:row;
+    gap:2rem;
+  }
   .navbar-brand {
     display: flex;
     margin-left:3rem;
@@ -140,20 +155,20 @@ const NavbarStyled = styled.div`
   }
 `;
 
-const StyledMenu = styled(Menu)`
-  & > div {
-    background-color: var(--editor-color);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    .navbar-menu-items {
-      color: var(--font-light-color) !important;
-      font-size: 0.8rem;
-      &:hover {
-        color: var(--primary-color) !important;
-      }
-      span {
-        margin: 0 0.3rem;
-        font-size: 0.8rem;
-      }
-    }
-  }
-`;
+// const StyledMenu = styled(Menu)`
+//   & > div {
+//     background-color: var(--editor-color);
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//     .navbar-menu-items {
+//       color: var(--font-light-color) !important;
+//       font-size: 0.8rem;
+//       &:hover {
+//         color: var(--primary-color) !important;
+//       }
+//       span {
+//         margin: 0 0.3rem;
+//         font-size: 0.8rem;
+//       }
+//     }
+//   }
+// `;

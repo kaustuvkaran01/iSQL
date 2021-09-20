@@ -50,7 +50,7 @@ const OutputTable = ({ data }) => {
 
 const OutputTableStyled = styled.div`
   width: 100%;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   table,
   th,
   td {

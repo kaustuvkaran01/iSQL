@@ -69,7 +69,7 @@ function Navigation() {
             <span className="nav-span">
               {" "}
               <DashboardIcon className="nav-item-icon" /> 
-              <span>Dashboard</span>
+              <span>Workspaces</span>
             </span>
           </NavLink>
         </li>
@@ -78,7 +78,7 @@ function Navigation() {
             <span className="nav-span">
               {" "}
               <ListAltIcon className="nav-item-icon" /> 
-              <span>Schema</span>
+              <span>Stats</span>
             </span>
           </NavLink>
         </li>

@@ -29,9 +29,8 @@ const EditorPage = () => {
     // setSearchFilterDisabled
   } = useContext(SQLContext);
 
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [searchSnackbarOpen, setSearchSnackbarOpen] = useState(false);
-
+  const [snackbarOpen] = useState(false);
+  const [searchSnackbarOpen] = useState(false);
   const [direction] = useState({
     vertical: "bottom",
     horizontal: "right",

@@ -102,7 +102,7 @@ export default function EditorButtonGroup() {
             onClick={() => handleSearchDisabled()}
             >
             <input
-              type="text"
+              type="search"
               name="search"
               placeholder="Search"
               value={searchFilterValue}

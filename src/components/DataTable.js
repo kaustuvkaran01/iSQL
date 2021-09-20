@@ -24,7 +24,8 @@ const OutputTable = () => {
 
   return (
     <OutputTableStyled>
-        {tableColumns}
+        {/* {tableColumns} */}
+        <p>Active Table:</p>
       <table>
         <thead>
           <tr>
@@ -53,8 +54,13 @@ const OutputTable = () => {
 };
 
 const OutputTableStyled = styled.div`
-  width: 72rem;
-  /* overflow-x: scroll; */
+  min-width: 72rem;
+  padding-left:1rem;
+  /* overflow: scroll; */
+  table{
+    min-width:72rem;
+    margin-bottom:5rem;
+  }
   table,
   th,
   td {
@@ -77,7 +83,7 @@ const OutputTableStyled = styled.div`
     width: 11.11%;
   }
   td p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--white-color);
   }
   &::-webkit-scrollbar {
