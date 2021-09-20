@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# SQL Editor as a part of Atlan Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can check out the application at : **https://sql-editor-atlan.netlify.app/**
 
-## Available Scripts
+The application fulfils all the requirements that were mentioned by team Atlan.
 
-In the project directory, you can run:
+You can run different queries, filter table data based on search, clear editor, format queries, etc.
 
-### `yarn start`
+**Task :** Create a SQL editor view where your users can query easily on a table using SQL, and see the results.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Data
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I have coverted the customers.csv file provided by team Atlan to JSON format and thus loaded it anytime a query is demanding the data to be retrieved from the file.
 
-### `yarn test`
+## List of all major libraries utilised in the application:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I tried to use as less libraries as possible so as to make application load faster and code the proper way.
 
-### `yarn build`
+1. ReactJS:
+2. MaterialUI: For icons and a modal
+3. Styled Components - For CSS & DarkMode/LightMode
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Highlights
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Optimizing Loading Time
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - I used browser's lighthouse tool to find out the load time and then cross-checked it using analytic tools like GTmatrix and Web.Dev. The final **Time To Interactive** is just 0.4s and the **Fully Loaded Time** is 1.1s.
+   - I have added fallback fonts in CSS font-family to ensure that the text remains visible during the webfont load (Nunito). This improved the **FCP Score** to 0.4s.
+   - With React's Virtual DOM, rendering components is fast & thus the **LCP Score** for the dashboard is just 0.4s.
+   - **Caching with Service worker** improved performance on subsequent loads.
+   - CLS(Cumulative Layout Shift) is 0.
 
-### `yarn eject`
+![Screen Shot 2021-06-08 at 2 13 27 AM](https://user-images.githubusercontent.com/54510593/121086599-fd4a6b00-c800-11eb-915b-b92f15d72ac4.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Responsive
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - I have used media queries wherever possible so as to make the application look responive across desktops, tablets & mobile phones
+   - I have avoided absolute sizing of fonts/containers wherever possible & instead used **_em_** & **_rem_**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Progressive Web App
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   - Installable
+   - Optimized
+   - Can be used offline
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![screencapture-sql-editor-atlan-netlify-app-2021-06-08-02_22_50](https://user-images.githubusercontent.com/54510593/121086862-54e8d680-c801-11eb-9c15-3861e81b9bba.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![screencapture-sql-editor-atlan-netlify-app-editor-2021-06-08-02_23_21](https://user-images.githubusercontent.com/54510593/121086883-5a462100-c801-11eb-9614-726ed65a06a1.png)
 
-### Code Splitting
+![screencapture-sql-editor-atlan-netlify-app-editor-2021-06-08-02_28_42](https://user-images.githubusercontent.com/54510593/121086890-5d411180-c801-11eb-97b3-8376f4681e47.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![screencapture-sql-editor-atlan-netlify-app-2021-06-08-02_29_01](https://user-images.githubusercontent.com/54510593/121086911-6500b600-c801-11eb-95ac-46a6844aff54.png)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![screencapture-sql-editor-atlan-netlify-app-editor-2021-06-08-02_24_35](https://user-images.githubusercontent.com/54510593/121086917-692cd380-c801-11eb-9c96-863a143bdf3f.png)
