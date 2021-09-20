@@ -29,7 +29,7 @@ I tried to use as few libraries as possible to make the application load faster 
    - With React's Virtual DOM, rendering components is fast & thus the **LCP Score** for the dashboard is just 1.0s.
    - **Caching with Service worker** improved performance on subsequent loads.
    - CLS(Cumulative Layout Shift) is 0.
-   - Use of React.lazy improved the performance greatly by lazy loading the Editor component which was decreasing site performance greatly.
+   - Use of React.lazy() improved the performance greatly by lazy loading the Editor component which was decreasing site performance greatly.
 
 ![Screenshot 2021-09-20 184501](https://user-images.githubusercontent.com/43791878/134008831-6121b47a-d293-4d24-9b63-96c357088320.png)
 
