@@ -25,7 +25,7 @@ const OutputTable = () => {
   return (
     <OutputTableStyled>
         {/* {tableColumns} */}
-        <p>Active Table:</p>
+        <p className="table-title">Active Table:</p>
       <table>
         <thead>
           <tr>
@@ -56,6 +56,11 @@ const OutputTable = () => {
 const OutputTableStyled = styled.div`
   min-width: 72rem;
   padding-left:1rem;
+  .table-title{
+    font-size:xx-large;
+    padding:1rem;
+    font-weight:bold;
+  }
   /* overflow: scroll; */
   table{
     min-width:72rem;
