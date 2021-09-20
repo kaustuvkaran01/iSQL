@@ -10,7 +10,7 @@ You can run different queries, filter table data based on search, clear editor, 
 
 ## Data
 
-The data has been taken from here ![](https://github.com/graphql-compose/graphql-compose-examples/tree/master/examples/northwind/data/csv)
+The data has been taken from !here(https://github.com/graphql-compose/graphql-compose-examples/tree/master/examples/northwind/data/csv)
 The data has been modified by me to be used as example.
 
 ## List of all major libraries utilised in the application:
