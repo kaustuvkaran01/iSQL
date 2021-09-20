@@ -45,12 +45,6 @@ I tried to use as less libraries as possible so as to make application load fast
 
 ## Screenshots
 
-![screencapture-sql-editor-atlan-netlify-app-2021-06-08-02_22_50](https://user-images.githubusercontent.com/54510593/121086862-54e8d680-c801-11eb-9c15-3861e81b9bba.png)
-
-![screencapture-sql-editor-atlan-netlify-app-editor-2021-06-08-02_23_21](https://user-images.githubusercontent.com/54510593/121086883-5a462100-c801-11eb-9614-726ed65a06a1.png)
-
-![screencapture-sql-editor-atlan-netlify-app-editor-2021-06-08-02_28_42](https://user-images.githubusercontent.com/54510593/121086890-5d411180-c801-11eb-97b3-8376f4681e47.png)
-
-![screencapture-sql-editor-atlan-netlify-app-2021-06-08-02_29_01](https://user-images.githubusercontent.com/54510593/121086911-6500b600-c801-11eb-95ac-46a6844aff54.png)
-
-![screencapture-sql-editor-atlan-netlify-app-editor-2021-06-08-02_24_35](https://user-images.githubusercontent.com/54510593/121086917-692cd380-c801-11eb-9c96-863a143bdf3f.png)
+![image](https://user-images.githubusercontent.com/43791878/134009191-4c829d5e-cb04-4e71-a563-36a015246604.png)
+![image](https://user-images.githubusercontent.com/43791878/134009237-59650b26-ec7e-4b61-9042-93a75058bc69.png)
+![image](https://user-images.githubusercontent.com/43791878/134009407-704e94fb-2be0-45bf-9d85-a2c5e8653a86.png)
