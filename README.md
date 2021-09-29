@@ -17,7 +17,7 @@ The data has been modified by me to be used as example.
 
 I tried to use as few libraries as possible to make the application load faster and avoid chaos.
 
-1. ReactJS:
+1. ReactJS
 2. MaterialUI: For icons and a modal
 3. Styled Components - For CSS & DarkMode/LightMode
 4. TailwindCSS - Built on Tailwind and then migrated to styled components 
